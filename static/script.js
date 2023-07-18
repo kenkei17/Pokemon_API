@@ -1,7 +1,9 @@
 const fetchData = async () => {
   const main = document.getElementById("main");
   try {
-    const response = await fetch("http://localhost:3000/api/pokemon");
+    const response = await fetch(
+      "https://pokemon-api-swart.vercel.app/api/pokemon"
+    );
     const pokemon = await response.json();
     if (!response.ok) {
       throw new Error("Error: " + response.status);
